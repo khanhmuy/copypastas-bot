@@ -5,7 +5,7 @@ module.exports = {
 	on: true,
 	execute(client, message) {
 		// Set Prefix
-		client.data.ensure(`guild.${message.guild.id}.prefix`, '!');
+		client.data.ensure(`guild.${message.guild.id}.prefix`, '.');
 
 		const prefix = client.data.get(`guild.${message.guild.id}.prefix`);
 
@@ -65,6 +65,7 @@ module.exports = {
 		try {
 			command.execute(client, message, args);
 		} catch (err) {
+			console.log(err);
 			const embed = new MessageEmbed()
 				.setTitle('Error')
 				.setDescription(`${err}`)

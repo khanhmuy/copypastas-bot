@@ -2,14 +2,10 @@ module.exports = {
 	name: 'ready',
 	once: 'true',
 	async execute(client) {
-		client.user.setPresence({
+		client.user.setStatus({
 			status: 'online',
-			activity: {
-				name: 'Copypastas',
-				type: 'PLAYING',
-			},
 		});
-
-		console.log(`Connection established! Logged in as ${client.user.tag} 🚀!`);
+		client.user.setActivity('Văn mẫuz');
+		console.log(`Connection established (${client.ws.ping}ms). Logged in as ${client.user.username}#${client.user.discriminator} (${client.user.id})`);
 	},
 };

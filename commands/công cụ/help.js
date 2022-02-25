@@ -12,9 +12,8 @@ module.exports = {
 		if (!args[0]) {
 			const embed = new MessageEmbed()
 				.setColor('BLURPLE')
-				.setTitle('Commands')
+				.setTitle('Lệnh')
 				.setDescription(`Nhập \`${prefix}help [command]\` để xem thông tin lệnh.`)
-				.setThumbnail('https://cdn.discordapp.com/attachments/858855894204678206/874231112686247956/eider-animate.gif')
 				.setTimestamp()
 				.setFooter('Cập nhật lần cuối');
 			const commandFolders = fs.readdirSync('./commands');
@@ -30,7 +29,7 @@ module.exports = {
 					array.push(`\`${prefix}${command.name}\``);
 				}
 
-				embed.addField(folder, array.join('\n'), true);
+				embed.addField(folder, array.join(' '));
 			}
 
 			message.reply({ embeds: [ embed ], allowedMentions: { repliedUser: false } });

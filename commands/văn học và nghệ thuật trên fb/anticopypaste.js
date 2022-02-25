@@ -1,0 +1,9 @@
+module.exports = {
+    name: 'anticopypaste',
+    description: 'Cả đời này mình ghét nhất ai mà chuyên comment copy paste lại',
+    cooldown: 1,
+    async execute(client, message) {
+        message.delete();
+        message.channel.send('Cả đời này mình ghét nhất ai mà chuyên comment copy paste lại, bộ mấy bạn lựa lời đàng hoàng nói không được hả hay bị cạn ý tưởng. Làm vậy là không tôn trọng người đăng post, cũng tự làm hại bản thân bạn bị thụt lùi đấy, đề nghị mấy bạn chấn chỉnh lạiCả đời này mình ghét nhất ai mà chuyên comment copy paste lại, bộ mấy bạn lựa lời đàng hoàng nói không được hả hay bị cạn ý tưởng. Làm vậy là không tôn trọng người đăng post, cũng tự làm hại bản thân bạn bị thụt lùi đấy, đề nghị mấy bạn chấn chỉnh lạiCả đời này mình ghét nhất ai mà chuyên comment copy paste lại, bộ mấy bạn lựa lời đàng hoàng nói không được hả hay bị cạn ý tưởng. Làm vậy là không tôn trọng người đăng post, cũng tự làm hại bản thân bạn bị thụt lùi đấy, đề nghị mấy bạn chấn chỉnh lạiCả đời này mình ghét nhất ai mà chuyên comment copy paste lại, bộ mấy bạn lựa lời đàng hoàng nói không được hả hay bị cạn ý tưởng. Làm vậy là không tôn trọng người đăng post, cũng tự làm hại bản thân bạn bị thụt lùi đấy, đề nghị mấy bạn chấn chỉnh lạiCả đời này mình ghét nhất ai mà chuyên comment copy paste lại, bộ mấy bạn lựa lời đàng hoàng nói không được hả hay bị cạn ý tưởng. Làm vậy là không tôn trọng người đăng post, cũng tự làm hại bản thân bạn bị thụt lùi đấy, đề nghị mấy bạn chấn chỉnh lại')
+    }
+}

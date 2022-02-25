@@ -1,6 +1,7 @@
 module.exports = {
     name: 'banlanhat',
     description: 'Dùng khi đối phương là nhất',
+    aliases: ['bln'],
     cooldown: 1,
     async execute(client, message, args) {
         message.delete();

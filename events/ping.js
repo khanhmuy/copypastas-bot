@@ -9,8 +9,11 @@ module.exports = {
 		if (message.content.startsWith(`<@!${client.user.id}>`) || message.content.startsWith(`<@${client.user.id}>`)) {
 			const embed = new MessageEmbed()
 				.setTitle('Xin chào! Tôi là Văn Mẫu Bot')
-				.setDescription(`Prefix hiện tại của tôi là \`${prefix}\`\n Để bắt đầu, nhập \`${prefix}help\` để xem các lệnh có sẵn.`)
+				.setDescription(`VĂN MẪU DÙNG ĐỂ ÁP ĐẢO ĐỐI PHƯƠNG BẰNG NGÔN TỪ`)
+				.addField('Prefix', 'Prefix hiện tại của tôi là \`' + prefix + '\` \nĐể bắt đầu, nhập \`' + prefix + 'help\` để xem các lệnh có sẵn.')
+				.addField('Thêm Văn Mẫu Bot vào server của bạn', '[Nhấn vào đây để thêm Văn Mẫu Bot vào server của bạn](https://discord.com/oauth2/authorize?client_id=922041356384350208&permissions=274878295104&scope=bot)')
 				.setColor('BLURPLE')
+				.setURL('https://discord.com/oauth2/authorize?client_id=922041356384350208&permissions=274878295104&scope=bot')
 			message.channel.send({ embeds: [ embed ] });
 		}
 	},
