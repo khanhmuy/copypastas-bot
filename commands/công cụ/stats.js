@@ -13,27 +13,27 @@ module.exports = {
 			},
 			fields: [
 				{
-					name: 'Servers I\'m In',
+					name: 'Số server có tôi',
 					value: `${client.guilds.cache.size}`,
 					inline: true,
 				},
 				{
-					name: 'Members I\'m Serving',
+					name: 'Tổng số thành viên (global)',
 					value: `${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}`,
 					inline: true,
 				},
 				{
-					name: 'Members in this guild',
+					name: 'Số thành viên ở trong server này',
 					value: `${message.guild.memberCount}`,
 					inline: true,
 				},
 				{
-					name: 'Total Received Messages',
+					name: 'Tổng số tin nhắn đã nhận',
 					value: `${client.data.get('msgCounterTotal')}`,
 					inline: true,
 				},
 				{
-					name: 'Total Received Commands',
+					name: 'Tổng số lệnh đã nhận',
 					value: `${client.data.get('cmdCounterTotal')}`,
 					inline: true,
 				},
@@ -43,6 +43,6 @@ module.exports = {
 			},
 			timestamp: new Date(),
 		};
-		message.channel.send({ embeds: [embed] });
+		message.reply({ embeds: [embed], allowedMentions: { repliedUser: false } });
 	},
 };

@@ -73,7 +73,7 @@ module.exports = {
 				.addField('Cách dùng', usage, true)
 				.setColor('BLURPLE');
 
-			message.channel.send({ embeds: [embed], allowedMentions: { repliedUser: false } });
+			message.reply({ embeds: [embed], allowedMentions: { repliedUser: false } });
 		}
 	},
 };
