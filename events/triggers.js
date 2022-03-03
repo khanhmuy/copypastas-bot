@@ -29,9 +29,19 @@ module.exports = {
                     message.reply({files: ['https://cdn.discordapp.com/attachments/942078114715037716/948550288543998002/6A061E92-9C11-4B7C-9CC1-C8FC04D1C35A.mov'], allowedMentions: { repliedUser: false }})
                 }
             })
-            if (message.content.includes(khóc)) {
-                message.reply({files: ['https://cdn.discordapp.com/attachments/942078114715037716/948550275722006578/45A468AF-8528-4E2E-9F0A-02B777F1A691.mov'], allowedMentions: { repliedUser: false }})
+            const cry = {
+                cry: [
+                    "cry",
+                    "khóc",
+                    "khocs",
+                    "khok"
+                ]
             }
+            cry.cry.forEach(word => {
+                if (message.content.includes(khóc)) {
+                message.reply({files: ['https://cdn.discordapp.com/attachments/942078114715037716/948550275722006578/45A468AF-8528-4E2E-9F0A-02B777F1A691.mov'], allowedMentions: { repliedUser: false }})
+                }
+            })
         } catch(error) {
             console.log(error);
         }
