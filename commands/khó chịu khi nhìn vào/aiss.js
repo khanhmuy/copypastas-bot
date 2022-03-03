@@ -3,7 +3,7 @@ module.exports = {
     name: 'aiss',
     description: 'Aissssssssssssssssssssssssssssss, bởi vì ta thích ngươi quá, phải làm sao đây, làm sao bây giờ?',
     async execute(client, message) {
-        const embed = new MessageEmbed
+        const embed = new MessageEmbed()
             .addFields(
                 {name: 'English', value: 'Aissssssssssssssssssssssss, because I like you so much, what to do, what to do? Can you see that? What to do, what to do? Smile, can\'t you see that? Don\'t worry about it, just smile, laugh, smile, Aiissssss is so excited for you, it\'s a distraction...'},
                 {name: 'Tiếng Việt', value: 'Aissssssssssssssssssssssssssssss, bởi vì ta thích ngươi quá, phải làm sao đây, làm sao bây giờ? Bạn có thể thấy điều đó? Phải làm gì, phải làm gì? Cười đi, bạn không thấy sao? Đừng lo lắng về điều đó, chỉ cần mỉm cười, cười, mỉm cười, Aiissssss rất vui mừng cho bạn, đó là một sự phân tâm...'},

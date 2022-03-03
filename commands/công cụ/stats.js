@@ -13,12 +13,12 @@ module.exports = {
 			},
 			fields: [
 				{
-					name: 'Số server có tôi',
+					name: 'Số server đang dùng tôi',
 					value: `${client.guilds.cache.size}`,
 					inline: true,
 				},
 				{
-					name: 'Tổng số thành viên (global)',
+					name: 'Đang được dùng bởi',
 					value: `${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}`,
 					inline: true,
 				},

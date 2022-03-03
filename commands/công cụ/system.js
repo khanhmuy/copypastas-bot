@@ -22,10 +22,10 @@ module.exports = {
 			const daysFinal = (days >= 1 ? days + ' ' + daysText + ', ' : '');
 			const hoursFinal = (hours >= 1 ? hours + ' ' + hoursText + ', ' : '');
 			const minutesFinal = (minutes >= 1 ? minutes + ' ' + minutesText + ' and ' : '');
-			const finished = `${daysFinal}${hoursFinal}${minutesFinal}${seconds} seconds`;
+			const finished = `${daysFinal}${hoursFinal}${minutesFinal}${seconds} giây`;
 			return finished;
 		}
-		const sysmsg = await message.channel.send('Getting information...');
+		const sysmsg = await message.channel.send('Đang lấy thông tin...');
 		si.cpu()
 			.then(cpu => {
 				si.mem()
@@ -39,14 +39,14 @@ module.exports = {
 												const totalSeconds = (client.uptime / 1000);
 												const uptime = convToDays(totalSeconds);
 												const embed = new Discord.MessageEmbed()
-													.setColor('RANDOM')
+													.setColor('GREEN')
 													.setTitle(`Thông tin của tiến trình bot và server ${client.user.username}`)
 													.setTimestamp()
-													.setFooter('Requested by ' + message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
-													.addField('Process Information', `**Uptime** \n${uptime} \n**Serving** \n${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)} members \n**Running** \n${process.release.name} ${process.version}`)
-													.addField('System Information', `**Device Hostname** \n${os.hostname} \n**CPU** \n${cpu.cores} Core ${cpu.manufacturer} ${cpu.brand}@${cpu.speed}GHz ${process.config.variables.host_arch} \n**General CPU Load** \n${load.avgLoad}% \nCurrently ${temp.main}°c \n**Device Uptime** \n${convToDays(nodeOS.uptime())} \n**Memory** \nTotal Memory: ${(mem.total / 1000000000).toFixed(2)}GB \nUsed Memory: ${(mem.used / 1000000000).toFixed(2)}GB \nFree Memory: ${(mem.free / 1000000000).toFixed(2)}GB \n**Operating System** \n${os.distro} ${os.release} ${os.arch}`);
+													.setFooter('Được yêu cầu bởi ' + message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
+													.addField('Thông tin tiến trình', `**Thời gian chạy bot** \n${uptime} \n**Đang được dùng bởi** \n${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)} thành viên \n**Đang chạy** \n${process.release.name} ${process.version}`)
+													.addField('Thông tin hệ thông', `**Tên thiết bị** \n${os.hostname} \n**CPU** \n${cpu.cores} Core ${cpu.manufacturer} ${cpu.brand}@${cpu.speed}GHz ${process.config.variables.host_arch} \n**General CPU Load** \n${load.avgLoad}% \nNhiệt độ: ${temp.main}°c \n**Thời gian bật** \n${convToDays(nodeOS.uptime())} \n**Bộ nhớ** \nTổng bộ nhớ: ${(mem.total / 1000000000).toFixed(2)}GB \nBộ nhớ đã sử dụng: ${(mem.used / 1000000000).toFixed(2)}GB \nBộ nhớ trống: ${(mem.free / 1000000000).toFixed(2)}GB \n**Hệ điều hành** \n${os.distro} ${os.release} ${os.arch}`);
 												sysmsg.delete();
-												message.channel.send({ embeds: [embed] });
+												message.reply({ embeds: [embed], allowedMentions: { repliedUser: false } });
 											});
 									});
 							});
