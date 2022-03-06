@@ -9,7 +9,7 @@ module.exports = {
 			color: 'BLURPLE',
 			title: 'Xin chào! Tôi là Văn Mẫu Bot.',
 			thumbnail: {
-				url: 'https://cdn.discordapp.com/attachments/858855894204678206/874231112686247956/eider-animate.gif',
+				url: 'https://cdn.discordapp.com/avatars/922041356384350208/de5253811d2aff9e49b4780dfd6d8583.png?size=1024',
 			},
 			fields: [
 				{

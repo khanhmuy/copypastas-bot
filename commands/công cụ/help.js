@@ -71,8 +71,8 @@ module.exports = {
 				.setDescription(command.description)
 				.addField('Tên khác', aliases, true)
 				.addField('Cách dùng', usage, true)
-				.setColor('BLURPLE');
-
+				.setColor('BLURPLE')
+				.setThumbnail('https://cdn.discordapp.com/avatars/922041356384350208/de5253811d2aff9e49b4780dfd6d8583.png?size=1024');
 			message.reply({ embeds: [embed], allowedMentions: { repliedUser: false } });
 		}
 	},
