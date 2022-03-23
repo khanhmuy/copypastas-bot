@@ -42,6 +42,9 @@ module.exports = {
                 message.reply({files: ['https://cdn.discordapp.com/attachments/942078114715037716/948550275722006578/45A468AF-8528-4E2E-9F0A-02B777F1A691.mov'], allowedMentions: { repliedUser: false }})
                 }
             })
+            if (message.content.startsWith('skill issue')) {
+                message.reply({files: ['https://cdn.discordapp.com/attachments/942078114715037716/951402540329762846/image0.gif'], allowedMentions: { repliedUser: false }})
+            }
         } catch(error) {
             console.log(error);
         }

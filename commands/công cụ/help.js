@@ -61,7 +61,7 @@ module.exports = {
 				}
 				aliases = aliases.join(', ');
 			} else {
-				aliases = `No aliases exist for ${prefix + command.name}`;
+				aliases = `Không có tên nào khác dành cho ${prefix + command.name}`;
 			}
 			if (command.usage) {
 				usage = `\`${prefix + command.usage}\``;
