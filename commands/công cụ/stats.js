@@ -39,7 +39,7 @@ module.exports = {
 				},
 			],
 			footer: {
-				text: 'Last Refreshed',
+				text: 'Cập nhật lần cuối',
 			},
 			timestamp: new Date(),
 		};

@@ -20,8 +20,8 @@ module.exports = {
 				.setColor(color)
 				.setTitle('Pong!')
 				.addFields(
-					{ name: '⏱️ Websocket Heartbeat', value: `${client.ws.ping}ms`, inline: true },
-					{ name: '⌛ Roundtrip Latency', value: `${ping}ms`, inline: true }
+					{ name: '⏱️ Nhịp Websocket', value: `${client.ws.ping}ms`, inline: true },
+					{ name: '⌛ Độ trễ toàn phần', value: `${ping}ms`, inline: true }
 				)
 			message.reply({ embeds: [embed], allowedMentions: { repliedUser: false } });
 			msg.delete();

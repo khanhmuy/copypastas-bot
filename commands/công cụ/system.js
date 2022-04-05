@@ -40,7 +40,7 @@ module.exports = {
 												const uptime = convToDays(totalSeconds);
 												const embed = new Discord.MessageEmbed()
 													.setColor('GREEN')
-													.setTitle(`Thông tin của tiến trình bot và server ${client.user.username}`)
+													.setTitle(`Thông tin của tiến trình bot và server của ${client.user.username}`)
 													.setTimestamp()
 													.setFooter('Được yêu cầu bởi ' + message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
 													.addField('Thông tin tiến trình', `**Thời gian chạy bot** \n${uptime} \n**Đang được dùng bởi** \n${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)} thành viên \n**Đang chạy** \n${process.release.name} ${process.version}`)

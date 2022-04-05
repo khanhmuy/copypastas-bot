@@ -5,7 +5,8 @@ const chalk = require('chalk');
 module.exports = {
 	name: 'help',
 	description: 'Help Command',
-	usage: 'help [command]',
+	usage: 'help [lệnh]',
+	alases: ['giup', 'giupdo'],
 	cooldown: 5,
 	async execute(client, message, args) {
 		const prefix = client.data.get(`guild.${message.guild.id}.prefix`);
@@ -48,7 +49,7 @@ module.exports = {
 					if (cmd.description) if (cmd.description.includes(search)) return results[results.length] = cmd;
 				});
 			});
-			if (!results[0]) return message.channel.send('I can\'t find that command!');
+			if (!results[0]) return message.channel.send('Lệnh đó không tồn tại!');
 			const names = new Array();
 			results.forEach(x=>names[names.length] = `${names.length + 1}. ${x.name}`);
 
