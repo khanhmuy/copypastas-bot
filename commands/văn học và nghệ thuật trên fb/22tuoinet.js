@@ -3,6 +3,7 @@ module.exports = {
     name: '22tuoinet',
     description: '22 tuổi đầu vẫn còn phải ngửa tay ra xin tiền để đi net',
     cooldown: 1,
+    usage: '22tuoinet',
     async execute(client, message) {
         message.delete();
         const embed = new MessageEmbed()
